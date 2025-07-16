@@ -28,6 +28,7 @@ aave-credit-scoring/
 ├── score_distribution.png               # Bar plot of score distribution
 |
 ├── requirements.txt                     # Python dependencies
+|
 ├── README.md                            # Project overview, architecture, and usage
 └── analysis.md                          # Insights and score behavior analysis
 ```
@@ -63,6 +64,7 @@ python wallet-score.py
 ## Input/Output
 
 Input: `user-wallet-transactions.json`
+
 Outputs:
 
 - `wallet_credit_scores.csv`
@@ -70,7 +72,7 @@ Outputs:
 
 ## Results
 
-See (`analysis.md`)[https://github.com/adnanxsalim/project-wallet-credit-score/analysis.md] for full breakdown of:
+See [`analysis.md`](https://github.com/adnanxsalim/project-wallet-credit-score/analysis.md) for full breakdown of:
 
 - Score distribution
 - Behavioral patterns in different score bands
