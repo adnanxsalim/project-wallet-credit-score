@@ -72,7 +72,7 @@ Outputs:
 
 ## Results
 
-See [`analysis.md`](https://github.com/adnanxsalim/project-wallet-credit-score/analysis.md) for full breakdown of:
+See [`analysis.md`](https://github.com/adnanxsalim/project-wallet-credit-score/blob/main/analysis.md) for full breakdown of:
 
 - Score distribution
 - Behavioral patterns in different score bands
