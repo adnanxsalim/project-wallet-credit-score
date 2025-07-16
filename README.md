@@ -40,6 +40,7 @@ project-wallet-credit-score/
 ## Requirements
 
 ```bash
+# requirements.txt
 pandas
 numpy
 scikit-learn
@@ -59,14 +60,14 @@ These are engineered by grouping the transaction data per wallet and calculating
 
 ### Scoring Model
 
-I normalize all features using MinMaxScaler and apply a weighted sum based on domain intuition:
+I normalized all features using `MinMaxScaler` and apply a weighted sum based on domain intuition:
 
 - Positive weights: repay ratio, diversity, consistency, deposit size
 - Negative weights: liquidations, excessive borrowing, bot-like behavior
 
 The raw score is scaled to a range of 0–1000.
 
-## 🔄 Processing Flow
+## Processing Flow
 
 1. **Load & Parse**: Read the raw transaction JSON file, convert timestamps, and extract the action and amount fields.
 2. **Group by Wallet**: Aggregate transactions by `userWallet` to compute wallet-level features.
