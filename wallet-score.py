@@ -90,13 +90,20 @@ output_csv = "wallet_credit_scores.csv"
 features_df[["wallet", "credit_score"]].to_csv(output_csv, index=False)
 
 # Step 5: Plot score distribution
-score_bins = pd.cut(features_df["credit_score"], bins=range(0, 1100, 100))
-score_distribution = score_bins.value_counts().sort_index()
+bins = list(range(0, 1001, 100))
+labels = [f"{bins[i]+1}-{bins[i+1]}" if i != 0 else f"{bins[i]}-{bins[i+1]}" for i in range(len(bins)-1)]
+
+features_df["score_range"] = pd.cut(features_df["credit_score"], bins=bins, labels=labels, right=True, include_lowest=True)
+
+score_distribution = features_df["score_range"].value_counts().sort_index()
+
+print(score_distribution)
+
 
 plt.figure(figsize=(10, 6))
 score_distribution.plot(kind="bar", color="skyblue", edgecolor="black")
 plt.title("Wallet Credit Score Distribution")
-plt.xlabel("Score Range")
+plt.xlabel("Credit Score Range")
 plt.ylabel("Number of Wallets")
 plt.xticks(rotation=45)
 plt.tight_layout()
