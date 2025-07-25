@@ -1,4 +1,4 @@
-# Compound Wallet Credit Scoring
+# Compound V2 Wallet Credit Scoring
 
 ## Overview
 
