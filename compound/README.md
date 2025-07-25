@@ -52,7 +52,7 @@ By combining these indicators, the model aims to reflect real-world credit risk 
 ## Usage
 
 1. **Setup:**
-    - Create a `.env` file with your Etherscan API key:
+    - Rename the `.env.example` file to `.env` and add your Etherscan API key:
 
     ```bash
     ETHERSCAN_API_KEY="your_api_key_here"
@@ -84,7 +84,3 @@ pip install pandas numpy scikit-learn requests python-dotenv
 - The scoring model is heuristic and based on on-chain data only; it does not incorporate off-chain credit information.
 - API rate limits and data completeness depend on Etherscan’s service availability.
 - The model can be extended with more sophisticated machine learning techniques and additional data sources.
-
-## Contact
-
-For questions or contributions, please open an issue or submit a pull request on GitHub
